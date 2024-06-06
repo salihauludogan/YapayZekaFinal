@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emotion Recognition Upload</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-image: url('/static/image.jpeg');
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                background: rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+<body>
+    <div class="container">
+    <h1>Emotion Recognition - Upload</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="emotion_index" value="{{ emotion_index }}">
+        <input type="file" name="file" accept=".wav"><br><br>
+        <button type="submit">Upload and Predict</button>
+    </form>
+    </div>
+</body>
+</html>

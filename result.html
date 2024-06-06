@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Recognition Result</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/static/image.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Prediction Analysis Result</h1>
+        <p>Selected Emotion: {{ selected_emotion }}</p>
+        <p>Predicted Emotion: {{ predicted_emotion }}</p>
+        <p>Prediction Accuracy: {{ confidence }}%</p>
+        {% if all_confidences %}
+        <p>
+            Other Emotions:</p>
+        <ul>
+            {% for emotion, confidence in all_confidences.items() %}
+                <li>{{ emotion }}: {{ confidence }}%</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <a href="{{ url_for('index') }}">Go Back</a>
+    </div>
+</body>
+</html>

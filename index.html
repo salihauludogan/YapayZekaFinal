@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Recognition</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/static/image.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #330fe4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Recognition</h1>
+        <form action="/" method="post">
+            <select name="emotion" id="emotion" class="button">
+                <option value="0">Angry</option>
+                <option value="1">Calm</option>
+                <option value="2">Happy</option>
+                <option value="3">Sad</option>
+            </select>
+            <button type="submit" name="record" value="record" class="button">Record and Predict</button>
+        </form>
+    </div>
+</body>
+</html>
